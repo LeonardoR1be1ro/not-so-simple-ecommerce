@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_LeonardoR1be1ro_not_so_simple_ecommerce_1763491154734-pr-trigger-input-set
+  identifier: Build_LeonardoR1be1ro_not_so_simple_ecommerce_1763491154734prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_LeonardoR1be1ro_not_so_simple_ecommerce_1763491154734
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
