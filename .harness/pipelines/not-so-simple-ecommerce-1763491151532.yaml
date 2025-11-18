@@ -1,0 +1,35 @@
+pipeline:
+  identifier: Build_LeonardoR1be1ro_not_so_simple_ecommerce_1763491154734
+  name: Build not-so-simple-ecommerce
+  orgIdentifier: default
+  projectIdentifier: default_project
+  properties:
+    ci:
+      codebase:
+        build: <+input>
+        connectorRef: account.Github_OAuth_1763491142821
+        repoName: LeonardoR1be1ro/not-so-simple-ecommerce
+  stages:
+    - stage:
+        identifier: build
+        name: build
+        spec:
+          caching:
+            enabled: true
+          cloneCodebase: true
+          execution:
+            steps:
+              - step:
+                  identifier: installdependencies
+                  name: install dependencies
+                  spec:
+                    command: npm install
+                  timeout: ""
+                  type: Run
+          platform:
+            arch: Amd64
+            os: Linux
+          runtime:
+            spec: {}
+            type: Docker
+        type: CI
